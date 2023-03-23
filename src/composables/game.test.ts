@@ -1,5 +1,11 @@
-import { describe, test, expect, beforeEach } from 'vitest';
+import { describe, test, expect, beforeEach, vi} from 'vitest';
 import { gamestate, onClick, startGame } from './game';
+
+vi.mock('./randomSeconds', () => {
+    return {
+        randomSeconds: () => 1000
+    }
+});
 
 describe('game', () => {
     beforeEach(() => {
