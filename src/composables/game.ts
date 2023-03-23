@@ -12,6 +12,11 @@ function randomSeconds(minSec: number, maxSec: number) {
     return Math.floor(Math.random() * (maxSec - minSec + 1) + minSec) * 1000;
 }
 
+export function resetGame() {
+    gamestate.value = 'start';
+    reactionTime.value = 0;
+}
+
 export function onClick() {
     if (gamestate.value === 'start' || gamestate.value === 'result') {
         startGame();
