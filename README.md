@@ -12,3 +12,4 @@
 
 # Playwright
 1. npm install -D playwright
+2. Add two end-2-end tests for game
