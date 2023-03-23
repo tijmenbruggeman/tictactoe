@@ -17,6 +17,15 @@ describe('game', () => {
         onClick();
         expect(gamestate.value).toEqual('lost');
     });
+
+    test('when player has lost, it should remain in that state', async () => {
+        startGame();
+        await wait(1000);
+        onClick();
+        expect(gamestate.value).toEqual('lost');
+        await wait(4000);
+        expect(gamestate.value).toEqual('lost');
+    });
 });
 
 function wait(ms: number) {

@@ -27,6 +27,10 @@ export function onClick() {
         reactionTime.value = end.value - start.value;
         gamestate.value = 'result';
     }
+    
+    if (gamestate.value === 'clickable') {
+        gamestate.value = 'lost';
+    }
 }
 
 type GAMESTATES = 'start' | 'clickable' | 'clickclickclick' | 'lost' | 'result';

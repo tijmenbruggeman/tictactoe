@@ -7,3 +7,4 @@
 6. Make first two tests pass
 7. write test for new feature
 8. allow long running test
+9. add test for another scenario
