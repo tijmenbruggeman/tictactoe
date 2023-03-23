@@ -6,3 +6,4 @@
 5. Create first test for game
 6. Make first two tests pass
 7. write test for new feature
+8. allow long running test
