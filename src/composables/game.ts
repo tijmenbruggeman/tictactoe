@@ -22,11 +22,6 @@ export function onClick() {
         startGame();
         return;
     }
-
-    if (gamestate.value === 'clickable') {
-        // to early!!!
-    }
-
     if (gamestate.value === 'clickclickclick') {
         end.value = Date.now();
         reactionTime.value = end.value - start.value;
