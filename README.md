@@ -8,3 +8,7 @@
 7. write test for new feature
 8. allow long running test
 9. add test for another scenario
+
+
+# Playwright
+1. npm install -D playwright
