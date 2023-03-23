@@ -1,7 +1,10 @@
-import { describe, test, expect, vi } from 'vitest';
+import { describe, test, expect, beforeEach } from 'vitest';
 import { gamestate, onClick, startGame } from './game';
 
 describe('game', () => {
+    beforeEach(() => {
+        gamestate.value = 'start';
+    });
     test('when game hasnt started, gamestate should be "start"', () => {
         expect(gamestate.value).toEqual('start')
     });
@@ -20,7 +23,7 @@ describe('game', () => {
 
     test('when player has lost, it should remain in that state', async () => {
         startGame();
-        await wait(1000);
+        await wait(1500);
         onClick();
         expect(gamestate.value).toEqual('lost');
         await wait(4000);

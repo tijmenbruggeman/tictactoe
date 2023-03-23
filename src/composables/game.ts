@@ -3,6 +3,7 @@ import { ref } from "vue";
 export function startGame() {
     gamestate.value = 'clickable';
     setTimeout(() => {
+        if (gamestate.value === 'lost') return;
         gamestate.value = 'clickclickclick';
         start.value = Date.now();
     }, randomSeconds(1, 5));
