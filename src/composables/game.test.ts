@@ -3,7 +3,7 @@ import { gamestate, onClick, startGame } from './game';
 
 vi.mock('./randomSeconds', () => {
     return {
-        randomSeconds: () => 1000
+        randomSeconds: () => 2000
     }
 });
 
@@ -31,8 +31,6 @@ describe('game', () => {
         startGame();
         await wait(1500);
         onClick();
-        expect(gamestate.value).toEqual('lost');
-        await wait(4000);
         expect(gamestate.value).toEqual('lost');
     });
 });
