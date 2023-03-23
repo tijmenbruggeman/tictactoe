@@ -1,4 +1,5 @@
 import { ref } from "vue";
+import { randomSeconds } from "./randomSeconds";
 
 export function startGame() {
     gamestate.value = 'clickable';
@@ -9,9 +10,7 @@ export function startGame() {
     }, randomSeconds(1, 5));
 }
 
-function randomSeconds(minSec: number, maxSec: number) {
-    return Math.floor(Math.random() * (maxSec - minSec + 1) + minSec) * 1000;
-}
+
 
 export function resetGame() {
     gamestate.value = 'start';
